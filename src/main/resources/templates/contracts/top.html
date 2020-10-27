@@ -38,20 +38,29 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home
-                <span class="sr-only">(current)</span>
-              </a>
+            <li class="nav-item active dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >各種設定</a
+              >
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" th:href="">管理者設定</a>
+                <a class="dropdown-item" th:href="">物件設定</a>
+                <a class="dropdown-item" th:href="">振込先・会費設定</a>
+                <a class="dropdown-item" th:href="">使い方ガイド</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#">ログアウト</a>
             </li>
           </ul>
         </div>
@@ -79,7 +88,11 @@
             <td>若槻新吾</td>
             <td>2018年3月31日</td>
             <td>2023年3月30日</td>
-            <td><i class="fas fa-edit"></i></td>
+            <td>
+              <a href="../contractors/edit_contractors.html" class="to-edit"
+                ><i class="fas fa-edit"></i
+              ></a>
+            </td>
           </tr>
 
           <tr>
@@ -278,7 +291,21 @@
         </table>
       </div>
     </main>
+
     <br />
+
+    <div class="text-right create-folder">
+      <span
+        data-trigger="hover"
+        data-placement="left"
+        data-content="契約者を登録"
+      >
+        <a id="fab" href="../contractors/register_contractors.html">
+          <i class="fa fa-plus"></i>
+        </a>
+      </span>
+    </div>
+
     <footer id="sticky-footer" class="py-4 text-white-50">
       <div class="container text-center">
         <small>Copyright &copy; Terrace Office Co.,Ltd.</small>
