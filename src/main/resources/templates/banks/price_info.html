@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -15,12 +15,12 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../../static/users/admin_list.css" />
-
-    <title>管理者一覧</title>
-  </head>
-  <body>
-  <!-- Navigation -->
+    <link rel="stylesheet" href="../../static/users/change_info.css" />
+    <title>Document</title>
+</head>
+<body>
+     <!-- Navigation -->
+    <div id="wrapper">
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -54,9 +54,8 @@
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a class="dropdown-item" th:href="">マイページ</a>
-                <a class="dropdown-item" href="admin_list.html"　th:href="">管理者一覧</a>
-                <a class="dropdown-item" th:href="">物件情報設定</a>
+                <a class="dropdown-item" th:href="">管理者設定</a>
+                <a class="dropdown-item" th:href="">物件設定</a>
                 <a class="dropdown-item" th:href="">振込先・会費設定</a>
                 <a class="dropdown-item" th:href="">使い方ガイド</a>
               </div>
@@ -68,62 +67,62 @@
         </div>
       </div>
     </nav>
-
-      <div class="container">
+    <main>
+    <div class="container">
         <main>
         <br>
-          <h4><strong>管理者一覧</strong></h4><br>
-         
-          <table class="table">
+          <h4><strong>振込先・町内会費情報</strong></h4>
+          <br><br>
+          <div><strong>登録している振込先</strong><a href="register_banks.html"><small style="float: right;">振込先を登録する</small></a></div>
+          <br>
+         <table class="table">
             <tr>
-              <th>管理者名</th>
-              <th>メールアドレス</th>
-              <th>郵便番号</th>
-              <th>住所</th>
-              <th>電話番号</th>
+              <th>銀行名</th>
+              <th>支店名</th>
+              <th>口座番号</th>
               <th>操作</th>
             </tr>
             <tr>
-              <td>高岡はつえ</td>
-              <td>terraceoffice@nuttari.jp</td>
-              <td>9500075</td>
-              <td>新潟県新潟市中央区沼垂東3-5-22</td>
-              <td>090-0000-0000</td>
+              <td>第四北越銀行</td>
+              <td>沼垂支店</td>
+              <td>*********</td>
               <td>
-                <a><i class="far fa-trash-alt"></i></a>
+                <a><i class="fas fa-edit"></i></a>
               </td>
             </tr>
              <tr>
-              <td>長濱葉子</td>
-              <td>y.nagahama@nuttari.jp</td>
-              <td>9500075</td>
-              <td>新潟県新潟市中央区沼垂東3-5-22</td>
-              <td>090-0000-0000</td>
+              <td>ゆうちょ銀行</td>
+              <td>新宿支店</td>
+              <td>***********</td>
               <td>
-                <a><i class="far fa-trash-alt"></i></a>
+                <a>< class="fas fa-edit"></i></a>
               </td>
             </tr>
-             <tr>
-              <td>新澤明美</td>
-              <td>a.shinzawa@nuttari.jp</td>
-              <td>9500075</td>
-              <td>新潟県新潟市中央区沼垂東3-5-22</td>
-              <td>090-0000-0000</td>
-              <td>
-                <a><i class="far fa-trash-alt"></i></a>
-              </td>
-            </tr>
-          </table>
-        </main>
-      </div>
+        </table>
+        <br>
+        <br>
+            <hr>       
+             <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              ><strong>現在の町内会費</strong><br><a href="../dues/edit_dues.html"><small>変更する</small></a></label
+            >
+            <div class="col-sm-10">
+              <p style="margin-top: 7px;">700 円</p>
+            </div>
+          </div>
 
-      <footer id="sticky-footer" class="py-4 text-white-50">
+
+
+         
+
+    </div>
+    </main>
+    <footer id="sticky-footer" class="py-4 text-white-50">
         <div class="container text-center">
           <small>Copyright &copy; Terrace Office Co.,Ltd.</small>
         </div>
       </footer>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -139,7 +138,5 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
-    <script src="../../static/js/admin_list.js"></script>
-  </body>
+</body>
 </html>

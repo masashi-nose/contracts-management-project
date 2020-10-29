@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../../static/users/admin_list.css" />
+    <link rel="stylesheet" href="../../static/buildings/building_info.css" />
 
     <title>管理者一覧</title>
   </head>
@@ -72,49 +73,120 @@
       <div class="container">
         <main>
         <br>
-          <h4><strong>管理者一覧</strong></h4><br>
+          <h4><strong>登録物件一覧</strong></h4><br>
          
           <table class="table">
             <tr>
-              <th>管理者名</th>
-              <th>メールアドレス</th>
+              <th>棟名</th>
               <th>郵便番号</th>
               <th>住所</th>
-              <th>電話番号</th>
+              <th>備考</th>
               <th>操作</th>
             </tr>
             <tr>
-              <td>高岡はつえ</td>
-              <td>terraceoffice@nuttari.jp</td>
-              <td>9500075</td>
+              <td>A棟</td>
+              <td>950-0075</td>
               <td>新潟県新潟市中央区沼垂東3-5-22</td>
-              <td>090-0000-0000</td>
+              <td></td>
               <td>
-                <a><i class="far fa-trash-alt"></i></a>
+                <a><i class="fas fa-edit"></i></a>
               </td>
             </tr>
-             <tr>
-              <td>長濱葉子</td>
-              <td>y.nagahama@nuttari.jp</td>
-              <td>9500075</td>
+            <tr>
+              <td>B棟</td>
+              <td>950-0075</td>
               <td>新潟県新潟市中央区沼垂東3-5-22</td>
-              <td>090-0000-0000</td>
+              <td></td>
               <td>
-                <a><i class="far fa-trash-alt"></i></a>
+                <a><i class="fas fa-edit"></i></a>
               </td>
             </tr>
-             <tr>
-              <td>新澤明美</td>
-              <td>a.shinzawa@nuttari.jp</td>
-              <td>9500075</td>
+            <tr>
+              <td>C棟</td>
+              <td>950-0075</td>
               <td>新潟県新潟市中央区沼垂東3-5-22</td>
-              <td>090-0000-0000</td>
+              <td></td>
               <td>
-                <a><i class="far fa-trash-alt"></i></a>
+                <a><i class="fas fa-edit"></i></a>
               </td>
             </tr>
+            <tr>
+              <td>D棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                 <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>E棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>F棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                 <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>G棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>サテライト1</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td>BOOKS f3入居</td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>サテライト2</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>サテライト3</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            
           </table>
         </main>
+        <div class="text-right create-folder">
+      <span
+        data-trigger="hover"
+        data-placement="left"
+        data-content="物件を登録"
+      >
+        <a id="fab" href="register_building.html">
+          <i class="fa fa-plus"></i>
+        </a>
+      </span>
+    </div>
       </div>
 
       <footer id="sticky-footer" class="py-4 text-white-50">
