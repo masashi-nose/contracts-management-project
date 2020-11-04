@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="../../static/contractors/register_contractors.css"
+    />
+    <title>契約者登録</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="http://placehold.it/150x50?text=Logo" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--main-->
+    <main>
+      <div class="container">
+        <br />
+        <h4><strong>新規契約者登録</strong></h4>
+        <br />
+        <form>
+          <div><strong>契約者ご本人様情報</strong></div>
+          <br />
+          <!--契約者名-->
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >氏名</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          　<!--郵便番号-->
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >郵便番号</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="ハイフンなし7桁"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >住所</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >メールアドレス（任意）</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >電話番号</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="ハイフンなしで入力"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >生年月日（任意）</label
+            >
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >備考</label
+            >
+            <div class="col-sm-10">
+              <textarea class="form-control"></textarea>
+            </div>
+          </div>
+
+          <hr />
+          <div><strong>連帯保証人様情報</strong></div>
+          <br />
+          <!--連帯保証人氏名-->
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >氏名</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >続柄</label
+            >
+            <div class="col-sm-10">
+              <select class="form-control">
+                <option>選択してください</option>
+                <option>父</option>
+                <option>母</option>
+                <option>兄</option>
+                <option>姉</option>
+                <option>弟</option>
+                <option>妹</option>
+                <option>祖父</option>
+                <option>祖母</option>
+                <option>叔父</option>
+                <option>叔母</option>
+                <option>配偶者</option>
+                <option>子</option>
+                <option>孫</option>
+                <option>その他</option>
+              </select>
+            </div>
+          </div>
+          <!--郵便番号-->
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >郵便番号</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="ハイフンなし7桁"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >住所</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >メールアドレス（任意）</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >電話番号</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="ハイフンなしで入力"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >生年月日（任意）</label
+            >
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >備考</label
+            >
+            <div class="col-sm-10">
+              <textarea class="form-control"></textarea>
+            </div>
+          </div>
+
+          <hr />
+          <div><strong>契約店舗情報</strong></div>
+          <br />
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >入居棟</label
+            >
+            <div class="col-sm-10">
+              <select class="form-control">
+                <option>選択してください</option>
+                <option>A棟</option>
+                <option>B棟</option>
+                <option>C棟</option>
+                <option>D棟</option>
+                <option>E棟</option>
+                <option>F棟</option>
+                <option>G棟</option>
+                <option>サテライト</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >店舗名</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >instagram</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >facebook</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >Twitter</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >ホームページ</label
+            >
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >契約開始</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="date"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="契約者名"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >契約終了</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="date"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="契約者名"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >賃料（税抜）</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="number"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="数字のみ入力"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >敷金（税抜）</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="number"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="数字のみ入力"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >町内会費</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="number"
+                class="form-control"
+                id="inputEmail3"
+                placeholder="数字のみ入力"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >振込先銀行</label
+            >
+            <div class="col-sm-10">
+              <select class="form-control">
+                <option>選択してください</option>
+                <option>第四北越銀行</option>
+                <option>ゆうちょ銀行</option>
+                <option>その他</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >備考</label
+            >
+            <div class="col-sm-10">
+              <textarea class="form-control"></textarea>
+            </div>
+          </div>
+          <br />
+          <div class="btn-bottom">
+            <input type="reset" class="" value="リセット" />
+            <a href="confirm_contractors.html">
+              <input type="button" class="" value="確認画面へ"
+            /></a>
+          </div>
+          <br />
+        </form>
+      </div>
+    </main>
+    <br />
+    <footer id="sticky-footer" class="py-4 text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; Terrace Office Co.,Ltd.</small>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

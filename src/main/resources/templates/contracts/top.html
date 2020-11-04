@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../static/contracts/top.css" />
+    <title>トップ</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="http://placehold.it/150x50?text=Logo" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >各種設定</a
+              >
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a
+                  class="dropdown-item"
+                  href="../users/edit_admin.html"
+                  th:href=""
+                  >マイページ</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="../users/admin_list.html"
+                  th:href=""
+                  >管理者一覧</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="../buildings/building_info.html"
+                  th:href=""
+                  >物件設定</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="../banks/price_info.html"
+                  th:href=""
+                  >振込先・会費設定</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="../users/admin_list.html"
+                  th:href=""
+                  >使い方ガイド</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ログアウト</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+      <div class="container">
+        <br />
+        <h4><strong>店舗一覧</strong></h4>
+
+        <table class="table">
+          <tr>
+            <th>棟</th>
+            <th>店舗名</th>
+            <th>契約者名</th>
+            <th>契約開始</th>
+            <th>契約終了</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>厨酒場わかつき</td>
+            <td>若槻新吾</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td>
+              <a href="../contractors/edit_contractors.html" class="to-edit"
+                ><i class="fas fa-edit"></i
+              ></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>B</td>
+            <td>青人窯</td>
+            <td>大山育男</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>ひとつぼし雑貨店</td>
+            <td>新澤明美</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>テラスオフィス</td>
+            <td>高岡はつえ</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>ISANA</td>
+            <td>中川雅之</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　
+            <td>C</td>
+            <td>ルルックキッチン</td>
+            <td>新澤明美</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　
+            <td>D</td>
+            <td>佐藤青果物店</td>
+            <td>佐藤八千代</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>灯台 -Toudai-</td>
+            <td>高岡はつえ</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　
+            <td>D</td>
+            <td>TANKON & キッチンガーデン・とみおか</td>
+            <td>タンコンさん</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　
+            <td>D</td>
+            <td>沼垂天然石市場</td>
+            <td>早川さん</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　
+            <td>E</td>
+            <td>S.W.D + s-plan</td>
+            <td>杉﨑潤</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　
+            <td>E</td>
+            <td>Kippis7265</td>
+            <td>猪股美保</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　
+            <td>E</td>
+            <td>nemon</td>
+            <td>長谷部りえ子</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　　
+            <td>E</td>
+            <td>松本商店</td>
+            <td>松本さん</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>E</td>
+            <td>miiba</td>
+            <td>遠藤ママ</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            　　
+            <td>E</td>
+            <td>らいおん堂</td>
+            <td>らいおんさん</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>E</td>
+            <td>FISH ON</td>
+            <td>三原洋介</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td>DILL</td>
+            <td>松尾紗矢</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td>taruhi glass works</td>
+            <td>伊藤さん</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td>mountain△grocery</td>
+            <td>有山葉子</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td>work place シロツメ舎</td>
+            <td>田中真美</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td>紡ぐ珈琲と。</td>
+            <td>松柴達也</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>サテライト</td>
+            <td>BOOKS f3</td>
+            <td>小倉快子</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+          <tr>
+            <td>サテライト</td>
+            <td>KADO shoe repair & beer stop</td>
+            <td>小島俊輔</td>
+            <td>2018年3月31日</td>
+            <td>2023年3月30日</td>
+            <td><i class="fas fa-edit"></i></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <br />
+
+    <div class="text-right create-folder">
+      <span
+        data-trigger="hover"
+        data-placement="left"
+        data-content="契約者を登録"
+      >
+        <a id="fab" href="../contractors/register_contractors.html">
+          <i class="fa fa-plus"></i>
+        </a>
+      </span>
+    </div>
+
+    <footer id="sticky-footer" class="py-4 text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; Terrace Office Co.,Ltd.</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

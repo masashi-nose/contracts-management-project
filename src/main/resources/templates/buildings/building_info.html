@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../static/users/admin_list.css" />
+    <link rel="stylesheet" href="../../static/buildings/building_info.css" />
+
+    <title>管理者一覧</title>
+  </head>
+  <body>
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="http://placehold.it/150x50?text=Logo" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >各種設定</a
+              >
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" th:href="">マイページ</a>
+                <a class="dropdown-item" href="admin_list.html"　th:href="">管理者一覧</a>
+                <a class="dropdown-item" th:href="">物件情報設定</a>
+                <a class="dropdown-item" th:href="">振込先・会費設定</a>
+                <a class="dropdown-item" th:href="">使い方ガイド</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ログアウト</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      <div class="container">
+        <main>
+        <br>
+          <h4><strong>登録物件一覧</strong></h4><br>
+         
+          <table class="table">
+            <tr>
+              <th>棟名</th>
+              <th>郵便番号</th>
+              <th>住所</th>
+              <th>備考</th>
+              <th>操作</th>
+            </tr>
+            <tr>
+              <td>A棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>B棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>C棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>D棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                 <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>E棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>F棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                 <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>G棟</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>サテライト1</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td>BOOKS f3入居</td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>サテライト2</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>サテライト3</td>
+              <td>950-0075</td>
+              <td>新潟県新潟市中央区沼垂東3-5-22</td>
+              <td></td>
+              <td>
+                <a><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            
+          </table>
+        </main>
+        <div class="text-right create-folder">
+      <span
+        data-trigger="hover"
+        data-placement="left"
+        data-content="物件を登録"
+      >
+        <a id="fab" href="register_building.html">
+          <i class="fa fa-plus"></i>
+        </a>
+      </span>
+    </div>
+      </div>
+
+      <footer id="sticky-footer" class="py-4 text-white-50">
+        <div class="container text-center">
+          <small>Copyright &copy; Terrace Office Co.,Ltd.</small>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../../static/js/admin_list.js"></script>
+  </body>
+</html>
