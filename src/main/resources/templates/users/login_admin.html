@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../../static/users/register.css" />
+    <link rel="stylesheet" href="../../static/users/register.css" th:href="@{/users/register.css}"/>
     <title>ログイン</title>
   </head>
   <body>
@@ -19,31 +19,45 @@
 
         <!-- Icon -->
         <h1 class="fadeIn first">ログイン</h1>
-        <br />
 
+		<div class="alert" th:if="${errorMessage}">
+			<small th:text="${errorMessage}" class="control-label" style="color:red"></small>
+		</div>
         <!-- Login Form -->
-        <form action="../contracts/top.html">
-          <input
-            type="email"
-            id="login"
-            class="fadeIn second"
-            name="email"
-            placeholder="メールアドレス"
-          />
-          <input
-            type="password"
-            id="password"
-            class="fadeIn third"
-            name="password"
-            placeholder="パスワード"
-          />
+        <div class="form">
+        <form method="post" th:action="@{/login}" th:object="${loginAdminForm}"> 
+          <div class="form-group row">
+          	<label class="col-sm-4 col-form-label" for="email" >メールアドレス</label>
+          	<small class="control-label" th:errors="*{email}" style="color: red"></small>
+          	  <div class="col-sm-8">
+          	    <input
+          	    	class="form-control"
+            		type="email"
+            		id="login"
+            		th:field="*{email}"
+          		/>
+          	  </div>
+          </div>
+          
+          <div class="form-group row">
+          	<label class="col-sm-4 col-form-label" for="name" >パスワード</label>
+          	<small class="control-label" th:errors="*{password}" style="color: red"></small>
+              <div class="col-sm-8">
+          	    <input
+          	    	class="form-control"
+            		type="password"
+            		id="password"
+            		th:field="*{password}"
+          		/>
+          		</div>
+          </div>
           <br /><br />
           <input
             type="submit"
-            class="fadeIn fourth login-btn"
             value="ログイン"
           />
         </form>
+        </div>
 
         <!-- Remind Passowrd -->
         <div id="formFooter">

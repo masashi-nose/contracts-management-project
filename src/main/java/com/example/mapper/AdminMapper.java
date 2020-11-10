@@ -16,13 +16,15 @@ public interface AdminMapper {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Admin record);
+    public int insert(Admin admin);
 
-    int insertSelective(Admin record);
+    int insertSelective(Admin admin);
 
     List<Admin> selectByExample(AdminExample example);
 
     Admin selectByPrimaryKey(Integer id);
+    
+    public Admin selectByEmail(String email);
 
     int updateByExampleSelective(@Param("record") Admin record, @Param("example") AdminExample example);
 

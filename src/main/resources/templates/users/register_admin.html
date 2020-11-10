@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../../static/users/register.css" />
+    <link rel="stylesheet" href="../../static/users/register.css" th:href="@{/users/register.css}"/>
     <script
       src="https://ajaxzip3.github.io/ajaxzip3.js"
       charset="UTF-8"
@@ -17,92 +17,131 @@
     <title>管理者登録</title>
   </head>
   <body>
-    <div class="wrapper fadeInDown">
+    <div class="wrapper">
       <div id="formContent">
         <!-- Tabs Titles -->
 
         <!-- Icon -->
-        <h1 class="fadeIn first">管理者登録</h1>
+        <h1>管理者登録</h1>
 
-        <!-- Login Form -->
-        <form>
-          <input
-            type="text"
-            id="name"
-            class="fadeIn second"
-            name="name"
-            placeholder="名前"
-          />
-
-          <input
-            type="email"
-            id="login"
-            class="fadeIn third"
-            name="email"
-            placeholder="メールアドレス"
-          />
-          <div class="zip-div">
-            <input
-              type="text"
-              id="zipcode"
-              class="fadeIn fourth zipcode"
-              name="zipcode"
-              size="10"
-              maxlength="8"
-              onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');"
-              placeholder="郵便番号"
-            />
-            <input
-              type="button"
-              id="searchAddress"
-              class="fadeIn fourth"
-              name="zip-btn"
-              value="住所検索"
-            />
+        <!-- register Form -->
+        <div class="form">
+        <form th:action="@{/admin/registerAdmin}" method="post" th:object="${registerAdminForm}">
+        
+        <!-- 名前 -->
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="name" >名前</label>
+          <small class="control-label" th:errors="*{name}" style="color: red"></small>
+         	<div class="col-sm-8">
+          		<input
+          			class="form-control"
+            		type="text"
+            		id="name"
+            		th:field="*{name}"
+          		/>
+           	</div>
+        </div>
+		
+		<!-- メールアドレス -->
+		<div class="form-group row">
+		  <label class="col-sm-4 col-form-label" for="name">メールアドレス</label>
+		  <small class="control-label" th:errors="*{email}" style="color: red"></small>
+          <div class="col-sm-8"> 
+          	<input
+          		class="form-control"
+            	type="email"
+            	id="login"
+            	th:field="*{email}"
+          	/>
           </div>
-          <input
-            type="text"
-            id="address"
-            class="fadeIn fifth"
-            name="address"
-            size="60"
-            placeholder="住所"
-          />
-          <input
-            type="text"
-            id="tel"
-            class="fadeIn sixth"
-            name="tel"
-            placeholder="電話番号"
-          />
+        </div>
+        
+        <!-- 郵便番号 -->
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="name">郵便番号</label>
+          <small class="control-label" th:errors="*{zipcode}" style="color: red"></small>
+          <div class="col-sm-8">
+           	<input
+           		class="form-control zipcode"
+           		type="text"
+           		id="zipcode"
+           		size="10"
+           		maxlength="8"
+           		onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');"
+           		th:field="*{zipcode}"
+           	/>
+          </div>
+        </div>
+          
+        <!-- 住所 -->
+        <div class="form-group row address">
+          <label class="col-sm-4 col-form-label" for="name">住所</label>
+          <small class="control-label" th:errors="*{address}" style="color: red"></small>
+        	  <div class="col-sm-8">
+          		<input
+            		class="form-control"
+           			type="text"
+            		id="address"
+            		size="60"
+		            th:field="*{address}"
+        		  />
+          	　　</div>
+        </div>
+        
+        <!-- 電話番号 -->
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="name">電話番号</label>
+          <small class="control-label" th:errors="*{tel}" style="color: red"></small>
+          	<div class="col-sm-8">
+              <input
+              	  class="form-control"
+            	  type="text"
+            	  id="tel"
+			      th:field="*{tel}"
+          	  />
+          	</div>
+        </div>
+		  
+		<!-- パスワード -->
+		<div class="form-group row">
+		  <label class="col-sm-4 col-form-label" for="name">パスワード</label>
+		  <small class="control-label" th:errors="*{password}" style="color: red"></small>
+          	<div class="col-sm-8">
+              <input
+           		  class="form-control"
+           		  type="password"
+           		  id="password"
+            	  th:field="*{password}"
+			  />
+    	    </div>
+         </div>
 
-          <input
-            type="password"
-            id="password"
-            class="fadeIn seventh"
-            name="password"
-            placeholder="パスワード"
-          />
+		 <!-- 確認パスワード -->
+		 <div class="form-group row">
+		 	<label class="col-sm-4 col-form-label" for="name">確認パスワード</label>
+		 	<small class="control-label" th:errors="*{confirmPassword}" style="color: red"></small>
+         	  <div class="col-sm-8">
+          		<input
+            		class="form-control"
+            		type="password"
+            		id="confirmPassword"
+            		th:field="*{confirmPassword}"
+	            />
+      		  </div>
+         </div>
 
-          <input
-            type="password"
-            id="confirmPassword"
-            class="fadeIn eighth"
-            name="password"
-            placeholder="確認パスワード"
-          />
-
-          <br /><br />
-          <input
+         <br />
+         <input
             type="submit"
-            class="fadeIn nineth register-btn"
+            class="register-btn"
             value="登録"
-          />
+         />
         </form>
+        </div>
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-          <a class="underlineHover fadeIn fifth" href="login_admin.html"
+          <a class="underlineHover fadeIn fifth" href="login_admin.html" th:href="@{/admin/toLogin}"
             ><small>ログインはこちら</small></a
           >
         </div>
