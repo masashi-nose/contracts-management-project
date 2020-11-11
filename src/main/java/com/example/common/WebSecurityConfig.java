@@ -48,7 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.loginPage("/admin/toLogin") // ログイン画面に遷移させるパス(ログイン認証が必要なパスを指定してかつログインされていないとこのパスに遷移される)
 				.loginProcessingUrl("/login") // ログイン可否判定するパス（HTMLの入力フォームでth:action()内に指定）
 				.failureUrl("/admin/toLogin?error=true") // ログイン失敗に遷移させるパス
-				.defaultSuccessUrl("/contractors/", false) // 第1引数:デフォルトでログイン成功時に遷移させるパス
+				.defaultSuccessUrl("/contracts/top", false) // 第1引数:デフォルトでログイン成功時に遷移させるパス
 												// 第2引数: true :認証後常に第1引数のパスに遷移
 												// false:認証されてなくて一度ログイン画面に飛ばされてもログインしたら指定したURLに遷移
 				.usernameParameter("email") // 認証時に使用するユーザ名のリクエストパラメータ名(今回はメールアドレスを使用)

@@ -26,5 +26,6 @@ public class Due {
 	private Date updatedAt;
 	/** バージョン */
 	private Integer version;
-
+	/** 管理者 */
+	private Admin admin;
 }

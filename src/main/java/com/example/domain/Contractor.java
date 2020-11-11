@@ -42,5 +42,11 @@ public class Contractor {
 	private Date updatedAt;
 	/** バージョン */
 	private Integer version;
+	/** 店舗 */
+	private Shop shop;
+	/** 連帯保証人 */
+	private JointGuarantor jointGuarantor;
+	/** 管理者 */
+	private Admin admin;
 
 }

@@ -14,8 +14,6 @@ import lombok.Data;
 public class Shop {
 	/** ID */
 	private Integer id;
-	/** 店舗オーナー */
-	private Integer owerId;
 	/** 棟ID */
 	private Integer buildingId;
 	/** 店舗名 */
@@ -40,5 +38,9 @@ public class Shop {
 	private Date updatedAt;
 	/** バージョン */
 	private Integer version;
+	/** 棟 */
+	private Building building;
+	/** 管理者 */
+	private Admin admin;
 
 }

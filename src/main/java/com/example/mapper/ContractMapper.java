@@ -10,6 +10,10 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface ContractMapper {
+	public List<Contract> selectAll();
+	
+	public Contract selectById(Integer id);
+	
     int countByExample(ContractExample example);
 
     int deleteByExample(ContractExample example);

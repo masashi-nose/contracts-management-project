@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,7 @@
     <link
       rel="stylesheet"
       href="../../static/contractors/register_contractors.css"
+      th:href="@{/contractors/register_contractors.css}"
     />
     <title>契約者情報編集</title>
   </head>
@@ -67,94 +68,92 @@
         <br />
         <h4><strong>登録情報編集</strong></h4>
         <div class="text-right">
-          <div>最終更新日時：2020年10月25日&nbsp;18時23分</div>
-          <div>更新者：高岡はつえ</div>
+          <div>最終更新日時：<span th:text="${contract.updatedAt}"></span></div>
+          <div>更新者：<span th:text="${contract.creator.name}"></span></div>
         </div>
         <br />
+        
         <form action="edit_contractors.html">
           <div><strong>契約者ご本人様情報</strong></div>
           <br />
+          
           <!--契約者名-->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >氏名</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">氏名</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" />
+              <input type="text" class="form-control" id="inputEmail3" th:value="${contract.contractor.name}"/>
             </div>
           </div>
-          　<!--郵便番号-->
+          
+          　	  <!--郵便番号-->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >郵便番号</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">郵便番号</label>
             <div class="col-sm-10">
               <input
                 type="text"
                 class="form-control"
                 id="inputEmail3"
                 placeholder="ハイフンなし7桁"
+                th:value="${contract.contractor.zipcode}"
               />
             </div>
           </div>
+          
+          <!-- 住所 -->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >住所</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">住所</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" />
+              <input type="text" class="form-control" id="inputEmail3" th:value="${contract.contractor.address}"/>
             </div>
           </div>
+          
+          <!-- メールアドレス -->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >メールアドレス（任意）</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">メールアドレス（任意）</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" />
+              <input type="text" class="form-control" id="inputEmail3" th:value="${contract.contractor.email}"/>
             </div>
           </div>
 
+		  <!-- 電話番号 -->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >電話番号</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">電話番号</label>
             <div class="col-sm-10">
               <input
                 type="text"
                 class="form-control"
                 id="inputEmail3"
                 placeholder="ハイフンなしで入力"
+                th:value="${contract.contractor.tel}"
               />
             </div>
           </div>
 
+		  <!-- 生年月日 -->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >生年月日（任意）</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">生年月日（任意）</label>
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="inputEmail3" />
+              <input type="date" class="form-control" id="inputEmail3" th:value="${contract.contractor.birthday}"/>
             </div>
           </div>
+          
+          <!-- 備考 -->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >備考</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">備考</label>
             <div class="col-sm-10">
-              <textarea class="form-control"></textarea>
+              <textarea class="form-control" th:value="${contract.contractor.comment}"></textarea>
             </div>
           </div>
 
           <hr />
           <div><strong>連帯保証人様情報</strong></div>
           <br />
+          
           <!--連帯保証人氏名-->
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label"
-              >氏名</label
-            >
+            <label for="inputEmail3" class="col-sm-2 col-form-label">氏名</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" />
+              <input type="text" class="form-control" id="inputEmail3" th:value="${contract.contractor.jointGuarantor.name}"/>
             </div>
           </div>
           <div class="form-group row">
@@ -192,6 +191,7 @@
                 class="form-control"
                 id="inputEmail3"
                 placeholder="ハイフンなし7桁"
+                th:value="${contract.jointGuarantor.zipcode}"
               />
             </div>
           </div>
@@ -200,7 +200,7 @@
               >住所</label
             >
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" />
+              <input type="text" class="form-control" id="inputEmail3" th:value="${contract.jointGuarantor.address}"/>
             </div>
           </div>
           <div class="form-group row">
@@ -208,7 +208,7 @@
               >メールアドレス（任意）</label
             >
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" />
+              <input type="text" class="form-control" id="inputEmail3" th:value="${contract.jointGuarantor.email}"/>
             </div>
           </div>
 
@@ -222,6 +222,7 @@
                 class="form-control"
                 id="inputEmail3"
                 placeholder="ハイフンなしで入力"
+                th:value="${contract.jointGuarantor.tel}"
               />
             </div>
           </div>
@@ -231,7 +232,7 @@
               >生年月日（任意）</label
             >
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="inputEmail3" />
+              <input type="date" class="form-control" id="inputEmail3" th:value="${contract.jointGuarantor.birthday}"/>
             </div>
           </div>
           <div class="form-group row">
@@ -239,7 +240,7 @@
               >備考</label
             >
             <div class="col-sm-10">
-              <textarea class="form-control"></textarea>
+              <textarea class="form-control" th:value="${contract.jointGuarantor.comment}"></textarea>
             </div>
           </div>
 
@@ -270,7 +271,7 @@
               >店舗名</label
             >
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" />
+              <input type="text" class="form-control" id="inputEmail3" th:value="${contract.shop.shopName}"/>
             </div>
           </div>
           <div class="form-group row">
@@ -282,7 +283,7 @@
                 type="date"
                 class="form-control"
                 id="inputEmail3"
-                placeholder="契約者名"
+                th:text="${#dates.format(contract.startAt, 'yyyy年MM月dd日')}"
               />
             </div>
           </div>
@@ -295,7 +296,7 @@
                 type="date"
                 class="form-control"
                 id="inputEmail3"
-                placeholder="契約者名"
+                th:text="${#dates.format(contract.endAt, 'yyyy年MM月dd日')}"
               />
             </div>
           </div>
@@ -309,6 +310,8 @@
                 class="form-control"
                 id="inputEmail3"
                 placeholder="数字のみ入力"
+                th:value="${contract.rent}"
+                
               />
             </div>
           </div>
@@ -322,6 +325,7 @@
                 class="form-control"
                 id="inputEmail3"
                 placeholder="数字のみ入力"
+                th:value="${contract.deposit}"
               />
             </div>
           </div>
@@ -335,6 +339,7 @@
                 class="form-control"
                 id="inputEmail3"
                 placeholder="数字のみ入力"
+                th:value="${contract.due.price}"
               />
             </div>
           </div>
@@ -356,7 +361,7 @@
               >備考</label
             >
             <div class="col-sm-10">
-              <textarea class="form-control"></textarea>
+              <textarea class="form-control" th:value="${contract.comment}"></textarea>
             </div>
           </div>
           <br />

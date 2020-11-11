@@ -10,6 +10,10 @@ import lombok.Data;
  * @author masashi.nose
  *
  */
+/**
+ * @author masashi.nose
+ *
+ */
 @Data
 public class Building {
 	/** ID */
@@ -32,5 +36,7 @@ public class Building {
 	private Date updatedAt;
 	/** バージョン */
 	private Integer version;
+	/** 管理者 */
+	private Admin admin;
 
 }

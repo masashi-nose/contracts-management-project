@@ -1,5 +1,6 @@
 package com.example.domain;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import lombok.Data;
@@ -39,12 +40,28 @@ public class Contract {
 	/** 登録者ID */
 	private Integer creatorId;
 	/** 登録日 */
-	private Date createdAt;
+	private Timestamp createdAt;
 	/** 更新者ID */
 	private Integer updaterId;
 	/** 更新日 */
-	private Date updatedAt;
+	private Timestamp updatedAt;
 	/** バージョン */
 	private Integer version;
+	/** 契約者 */
+	private Contractor contractor;
+	/** 連帯保証人 */
+	private JointGuarantor jointGuarantor;
+	/** 店舗 */
+	private Shop shop;
+	/** 棟 */
+	private Building building;
+	/** 町内会費 */
+	private Due due;
+	/** 銀行 */
+	private Bank bank;
+	/** 登録者 */
+	private Admin creator;
+	/** 更新者 */
+	private Admin updater;
 
 }

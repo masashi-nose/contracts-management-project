@@ -40,5 +40,9 @@ public class JointGuarantor {
 	private Date updatedAt;
 	/** バージョン */
 	private Integer version;
+	/** 続柄 */
+	private Relation relation;
+	/** 管理者 */
+	private Admin admin;
 
 }
